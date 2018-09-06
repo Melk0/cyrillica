@@ -1,0 +1,104 @@
+@font-face{
+    font-family:SF-UI-Display-Medium;
+    src: url("fonts/SF-UI-Display-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.floor {
+    width: 300px;
+    height: 100%;
+    background: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#floor4{
+    margin-left: 25%;
+    width: 95px;
+    display: flex;
+    hight: auto;
+    top: 8%;
+    position: absolute;
+    left:100%;
+    right: 0%;
+}
+#floor6{
+    margin-left: 25%;
+    width: 170px;
+    display: flex;
+    top: 0%;
+    hight: auto;
+    position: absolute;
+    left:100%;
+    right: 0%;
+}
+#floor5{
+    margin-left: 25%;
+    width: 170px;
+    display: flex;
+    bottom: 0;
+    hight: auto;
+    position: absolute;
+    left:100%;
+    right: 0%;
+}
+.floor2 {
+
+    height: 100%;
+    width: 100%;
+    background: #f8f8f8;
+    display: flex;
+    font-family: Myriad Pro;
+    font-size: 15px;
+}
+.floor3 {
+
+    height: 100%;
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+}
+.chair {
+    width: calc(calc(300px/15) - 2px);
+    height: calc(calc(140px/7) - 2px);
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    cursor: pointer;
+}
+
+.chair.buyed {
+    background: #ff8670;
+ }
+.chair.changed {
+    background: #262626;
+}
+.chair.free {
+    background: #138da2;
+}
+.chair.empty {
+    color: transparent;
+}
+.chair:hover {
+    opacity: 0.8;
+}
+.chair.price1 {
+    background: #1bb868;
+}
+.chair.price2 {
+    background: #d0683f;
+}
+.chair.price3 {
+    background: #128ba8;
+}
+.chair.price4 {
+    background: #5b40a8;
+}
+.chair.price5{
+    background: #a4a849;
+}
+.chair.scene{
+    background: black;
+    width: 300px;
+    height: 10px;
+}
