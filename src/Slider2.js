@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import './index.css';
+
 import ReactHoverObserver from 'react-hover-observer';
 let test = window.screen.height;
 const LEFT = 'left';
@@ -165,7 +165,7 @@ class Slider extends Component {
     componentWillUnmount() {
         clearTimeout(this.timeoutId)
     }
-	
+
 	componentDidMount() {
 		fetch(`/api.php?mode=slaider_news`)
 			.then((data) =>{
@@ -317,41 +317,21 @@ class Slider extends Component {
 */
 function withTestImages(WrappedComponent) {
     let images = [
-        'http://www.barco.com/images/productImages/nigel-lindsay-as-shrek-with-fairy-tale-characters_767f5ffd_L___Selected.jpg',
-        'http://www.anypics.ru/pic/201602/1024x768/anypics.ru-93129.jpg',
-        'https://www.tomswallpapers.com/pic/201503/1024x768/tomswallpapers.com-26765.jpg',
-        'http://www.ruseducation.in/img/smolesnk%20city.jpg'
+
     ];
 
 
     let title = [
-        'Заголовок новости №1',
-        'Заголовок новости №2',
-        'Заголовок новости №3',
-        'Заголовок новости №4',
+
     ];
 
     let text = [
-        'Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.\n' +
-        "\n" +
-        'Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу.',
 
-        'Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.\n' +
-        'Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений.',
-
-        'Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.\n' +
-        'Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль. ',
-
-        'Равным образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.\n' +
-        'Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров.',
     ];
 
 
     let button = [
-        'https://www.yandex.ru/',
-        'https://www.google.ru/',
-        'https://yandex.ru/pogoda/penza?from=serp_title',
-        'https://www.gismeteo.ru/',
+
     ];
 
     // Return a new, wrapper component

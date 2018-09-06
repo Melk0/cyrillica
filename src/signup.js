@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './body.css';
 import './style_input.css';
+import './booking.css';
 //import './fonts.css';
 
 
@@ -19,16 +20,14 @@ class Signup extends Component {
 
     Registration = () => {
 
-            fetch(`http://k.creativityprojectcenter.ru/api.php?mode=registration&email=${this.state.Email}&password=${this.state.Password}
-            &first_name=${this.state.First_Name}&last_name=${this.state.Last_Name}`)
-                .catch((err) => {});
-        console.log('Запрос ушёл а точнее:' )
-        console.log(this.state.Email)
-        console.log(this.state.Password)
-        console.log(this.state.First_Name)
-        console.log(this.state.Last_Name)
-
-        }
+            fetch(`http://k.creativityprojectcenter.ru/api.php?mode=registration&first_name=${this.state.First_Name}&last_name=${this.state.Last_Name}&email=${this.state.Email}&password=${this.state.Password}`)
+                .then((data) =>{
+                    return data.json();}).then((user) => {if (user.error===0) alert("Регистрация прошла успешно"); else alert("Ошибка, повторите ввод")})
+                .catch((err) => {alert("Ошибка")});
+  /*          fetch(`/api.php`, {method: "POST", body: JSON.stringify({mode: "registration", first_name:this.state.First_Name , last_name:this.state.Last_Name, email:this.state.Email,password:this.state.Password})}).then((data) =>{
+                return data.json();}).then((user) => {if (user.error===0) alert("Регистрация прошла успешно"); else alert("Ошибка, повторите ввод")})
+                .catch((err) => {alert("Ошибка")});*/
+        };
 
 
      inputEmail =(e) => {
@@ -75,7 +74,7 @@ class Signup extends Component {
                             <input type="text" name="Last_Name"  id="Last_Name" onInput={this.inputLastName}/>
                         </div>
                     </form>
-                    <button onClick={this.Registration}>Регистрация</button>
+                    <button className="Auth_Reg" onClick={this.Registration}>Регистрация</button>
                 </div>
             </div>
         );

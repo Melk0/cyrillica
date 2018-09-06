@@ -6,9 +6,8 @@ u {
 #root_1 {
     display: flex;
     width: 100%;
-    min-width: 860px;
+    /*min-width: 860px;*/
     /* height: 50%; */
-	margin-bottom: 20px;
 }
 
 #container {
@@ -359,14 +358,11 @@ u {
 
 #root_2 {
     display: flex;
-    width: 94%;
-    padding: 4% 3%;
+    width: 100%;
     background-color: #f8f8f8;
     justify-content: center;
     align-items: center;
     position: relative;
-	margin-top: 20px;
-	
 }
 
 .cont_slider-2 {

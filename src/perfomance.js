@@ -423,13 +423,21 @@ class Characters extends React.Component {
                 return data.json();})
             .then((user) => {
                 let arr = user.data[0].actors.map(function(i){ return i});
-                let first=  arr.map(function(i){ let k = i.name.split(' ');   return k[0]});
-                let second= arr.map(function(i){ let k = i.name.split(' ');   return k[1]});
+                let arr3=  arr.filter((i)=> i.speciality === `Актер`);
+                let first=  arr3.map(function(i){
+                    let k = i.name.split(' ');
+                    return k[0]
+                });
+                let second= arr3.map(function(i){
+                    let k = i.name.split(' ');
+                    return k[1]
+                });
                 let arr2=[];
                 for(let q=0; q<first.length;q++)
                 {
                     arr2.push({first_name:first[q],second_name : second[q]})
                 }
+                console.log(arr2);
                 this.setState ({
                     items : arr2.map(function(i){ return i}),
                 });
@@ -602,6 +610,28 @@ class Producer extends React.Component {
                 }
                     ]
         };
+    }
+    componentDidMount() {
+        fetch(`/api.php?mode=performance&id=${id}`)
+            .then((data) =>{
+                return data.json();})
+            .then((user) => {
+                let arr = user.data[0].actors.map(function(i){ return i});
+                let arr3=  arr.filter((i)=> i.speciality !== `Актер`);
+                let name=  arr3.map(function(i){  return i.name});
+                let post=  arr3.map(function(i){  return i.speciality});
+                let img=  arr3.map(function(i){ return i.photo});
+                let arr2=[];
+                for(let q=0; q<name.length;q++)
+                {
+                    arr2.push({name : name[q], post: post[q], img: img[q]})
+                }
+                console.log(arr2);
+                this.setState ({
+                    items : arr2.map(function(i){ return i}),
+                });
+            })
+            .catch((err) => {});
     }
 
     render() {

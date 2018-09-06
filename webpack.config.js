@@ -9,6 +9,8 @@ module.exports = {
       perfomance :'./src/perfomance-index.js',
 	  admin:'./src/admin.js',
 	  signup:'./src/signup-index.js',
+      input:'./src/input-index.js',
+      people_theater: './src/people-index.js'
   } , 
   output: 
   {

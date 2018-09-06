@@ -19,7 +19,7 @@ class Head extends Component {
 						<a href="#" class="menu" target="_self">Новости</a>
 						<a href="#" class="menu" target="_self">Афиша</a>
 						<a href="index.html" class="logo" target="_self"><img class="graficlogo" src="img/logo2.jpg" alt="Logo"/></a>
-						<a href="#" class="menu" target="_self">Люди театра</a>
+						<a href="/people.html" class="menu" target="_self">Люди театра</a>
 						<a href="#" class="menu" target="_self">Контакты</a>
 						<a href="#" class="menu" target="_self">Фотогалерея</a>
 					</div>

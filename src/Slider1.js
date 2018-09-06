@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import './index.css';
+
 import ReactHoverObserver from 'react-hover-observer';
 
 
@@ -354,39 +354,24 @@ class Slider extends Component {
 */
 function withTestImages(WrappedComponent) {
     let images = [
-        'http://fullhdwallpapers.ru/image/nature/4051/magicheskie-gory.jpg',
-        'http://thisisgalway.ie/wp-content/uploads/2016/10/the-voyage-babaro-1000-1.jpg',
-        'http://wallpaperscraft.ru/image/leto_reka_priroda_trava_84576_2560x1600.jpg',
-        'https://get.wallhere.com/photo/trees-forest-mountains-lake-water-nature-reflection-snow-Canada-valley-pine-trees-wilderness-Banff-National-Park-Moraine-Lake-mountain-season-mountainous-landforms-mountain-range-218637.jpg',
+
     ];
 
     let date = [
-        '10',
-        '11',
-        '12',
-        '13',
+
     ];
 
     let month = [
-        'марта',
-        'апреля',
-        'июня',
-        'августа',
+
     ];
 
     let text = [
-        'Смешные деньги',
-        'Плутни Скапена',
-        'Аленький цветочек',
-        'Крошка',
+
     ];
 
 
     let id_slider1 = [
-        '0',
-        '1',
-        '2',
-        '3',
+
     ];
 
     // Return a new, wrapper component

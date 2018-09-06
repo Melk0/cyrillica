@@ -15,7 +15,6 @@ body {
     background-attachment: fixed;
     font-family: SF UI Display Light;
     overflow: auto;
-    display: flex;
 }
 
 .body {
@@ -319,6 +318,20 @@ textarea {
     font-family: Myriad Pro, sans-serif;
     font-size: 12px;
 }
+#input1
+{
+    margin-top: 2%;
+}
+#signup
+{
+    margin-top: 2%;
+}
 
 
-
+#news_of_the_theater{
+    color: #737373;
+    font-size: 30px;
+    font-family: Myriad Pro, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

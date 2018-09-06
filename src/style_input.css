@@ -16,6 +16,8 @@
     margin: 0 auto 15px auto;
 }
 #input{
+    display: flex;
+    flex-direction: column;
     position: relative;
     left: 0;
     right: 0;
@@ -53,4 +55,20 @@
 #modal_form [type=email]:focus,
 #modal_form [type=password]:focus{
     outline: none;
+}
+#heading_3
+{
+    text-align: center;
+}
+
+
+.Auth_Reg{
+    font-size: 18px;
+    margin-top: 1%;
+    border: 1px;
+    background-color: #a02806;
+    color: white;
+    width: auto;
+    font-family: SF UI Display Thin;
+    text-align: center;
 }

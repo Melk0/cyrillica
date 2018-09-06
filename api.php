@@ -29,7 +29,6 @@ switch($mode) {
 		
 		$result = selectDB("SELECT id_person FROM users WHERE email = '$email'");
 		if($result == 0) {
-			print(111);
 			$register_key = generateVal($email);
 			$subject = 'Подтверждение регистрации';
 			$message = "Здравствуйте! Благодарим Вас за регистрацию на сайте сyrillic.ru! Для подтверждения регистрации перейдите по ссылке: http://сyrillic.ru/api.php?mode=activate&register_key=$register_key";
@@ -66,8 +65,8 @@ switch($mode) {
 	
 	case "auth": 
 	{
-		$password = generateVal(guard('password', $_POST['password'], "regexp", $regexp_password));
-		$email = guard('email', $_POST['email'], "regexp", $regexp_email);
+		$password = generateVal(guard('password', $_GET['password'], "regexp", $regexp_password));
+		$email = guard('email', $_GET['email'], "regexp", $regexp_email);
 		checkError();
 		
 		$result = selectDB("SELECT last_name FROM users WHERE email = '$email' AND password = '$password' AND activated = 1");
